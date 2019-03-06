@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val REQUEST_CODE_DOC = 100
         private const val PERMISSION_REQUEST_STORAGE = 101
+        private const val PAGE_NUMBER = 0
         private val PERMISSION_STORAGE =
             arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
     }
@@ -55,8 +56,12 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_CODE_DOC && resultCode == Activity.RESULT_OK) {
-            if (data?.data != null) {
-                Toast.makeText(this, "Document Opened", Toast.LENGTH_SHORT).show()
+            val uri = data?.data
+            if (uri != null) {
+                val bitmap = PDFThumbnailUtils.convertPDFtoBitmap(this, uri, PAGE_NUMBER)
+                if (bitmap != null) {
+                    imageView.setImageBitmap(bitmap)
+                }
             }
         }
     }

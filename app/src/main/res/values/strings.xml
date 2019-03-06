@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">PDFtoIMAGE</string>
+    <string name="app_name">PDF2IMAGE</string>
+    <string name="cd_pdf_image_view">PDF image viewer</string>
+    <string name="browse_document">Browse Document</string>
 </resources>
