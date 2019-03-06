@@ -1,4 +1,4 @@
-package com.ajithvgiri.pdftoimage
+package com.ajithvgiri.pdf2bitmap
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

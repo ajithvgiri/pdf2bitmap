@@ -1,4 +1,4 @@
-package com.ajithvgiri.pdftoimage
+package com.ajithvgiri.pdf2bitmap
 
 import org.junit.Test
 

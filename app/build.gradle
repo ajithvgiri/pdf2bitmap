@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.ajithvgiri.pdftoimage"
+        applicationId "com.ajithvgiri.pdf2bitmap"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1

@@ -1,4 +1,4 @@
-package com.ajithvgiri.pdftoimage
+package com.ajithvgiri.pdf2bitmap
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
