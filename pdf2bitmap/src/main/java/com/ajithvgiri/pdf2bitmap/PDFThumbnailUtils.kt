@@ -10,7 +10,7 @@ object PDFThumbnailUtils {
         val parcelFileDescriptor = context.contentResolver.openFileDescriptor(uri, "r")
         val pdfRenderer = PdfRenderer(parcelFileDescriptor)
         val currentPage = pdfRenderer.openPage(pageNumber)
-        val bitmap = Bitmap.createBitmap(currentPage.width, currentPage.height, Bitmap.Config.RGB_565)
+        val bitmap = Bitmap.createBitmap(currentPage.width, currentPage.height, Bitmap.Config.ARGB_8888)
         currentPage.render(bitmap, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
         // Here, we render the page onto the Bitmap.
         return bitmap
