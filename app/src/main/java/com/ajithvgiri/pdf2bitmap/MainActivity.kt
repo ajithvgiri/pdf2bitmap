@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_CODE_DOC && resultCode == Activity.RESULT_OK) {
             if (data?.data != null) {
-                Toast.makeText(this,"Document Opened",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Document Opened", Toast.LENGTH_SHORT).show()
             }
         }
     }
